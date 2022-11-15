@@ -30,7 +30,7 @@ let sequelize=
   ssl:true,
 }) */
 new Sequelize(
-  DATABASE_URL,
+  DATABASE_URL||`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/dogs`,
   {logging:false, native:false}
 );
 
