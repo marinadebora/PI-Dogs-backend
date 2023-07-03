@@ -30,7 +30,8 @@ let sequelize=
   ssl:true,
 }) */
 new Sequelize(
-  DATABASE_URL||`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/dogs`,
+  //postgres://pidogs_0ucs_user:mdUUEXahtbtX568jUfw7bIXlffcBmZYE@dpg-cihjkt5gkuvojj9ocuug-a.oregon-postgres.render.com/pidogs_0ucs
+  DATABASE_URL||`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DB_NAME}`,
   {logging:false, native:false}
 );
 
